@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente principal */
+    background-color: #f4f4f4; /* Color de fondo del cuerpo */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0;/* Elimina el relleno por defecto */
+    box-sizing: border-box; /* Elimina el relleno por defecto */
+    color: #333; /* Color del texto */
+}
+
+.sidebar {
+    width: 230px; /* Ancho de la barra lateral */
+    background-color: #000; /* Color de fondo de la barra lateral */
+    color: hwb(66 0% 0%); /* Color del texto en la barra lateral */
+    padding: 30px; /* Relleno dentro de la barra lateral */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    position: fixed; /* Fija la posición de la barra lateral */
+    height: 100%; /* Altura completa de la ventana */
+    display: flex; /* Usa flexbox dentro de la barra lateral */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Alinea los elementos al centro */
+}
+
+.sidebar .photo {
+    margin-bottom: 20px; /* Margen inferior para separar de los elementos de navegación */
+}
+
+.sidebar .photo img {
+    width: 150px; /* Ancho de la imagen */
+    height: 170px; /* Altura de la imagen */
+    border-radius: 20%; /* Hace la imagen redonda */
+    border: 5px solid #ffa11e; /* Borde alrededor de la imagen */
+}
+
+.sidebar nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno por defecto */
+    width: 100%; /* Ancho completo del contenedor */
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px; /* Espacio entre los elementos de la lista */
+    width: 100%; /* Ancho completo del contenedor */
+    text-align: center; /* Centra el texto */
+}
+
+.sidebar nav ul li a {
+    color: #ffa11e; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    font-size: 18px; /* Tamaño de fuente */
+    display: block; /* Hace que el enlace se comporte como un bloque */
+    padding: 10px; /* Relleno dentro de cada enlace */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #ffa11e; /* Color de fondo al pasar el ratón */
+    color: #000; /* Color del texto al pasar el ratón */
+}
+
+.redes nav ul li a {
+    color: #ffa11e; /* Color del texto de los enlaces de redes sociales */
+}
+
+.divider {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 1px; /* Altura de la línea */
+    background-color: #ffa11e; /* Color de la línea */
+    margin: 10px; /* Margen superior e inferior */
+}
+
+.content {
+    margin-left: 270px; /* Espacio a la izquierda para la barra lateral */
+    padding: 30px; /* Relleno dentro del contenido */
+    flex-grow: 5; /* Permite que el contenido crezca para llenar el espacio disponible */
+}
+
+h1 {
+    text-align: center; /* Centra el texto del título principal */
+    color: #333; /* Color del texto del título principal */
+}
+
+h2 {
+    color: #ffa11e; /* Color del texto de los subtítulos */
+    border-bottom: 2px solid #ffa11e; /* Línea inferior debajo de los subtítulos */
+    padding-bottom: 10px; /* Relleno debajo de los subtítulos */
+    margin-bottom: 20px; /* Margen inferior de los subtítulos */
+}
+
+h3 {
+    color: #333; /* Color del texto de los subtítulos de tercer nivel */
+    margin-top: 20px; /* Margen superior de los subtítulos de tercer nivel */
+    margin-bottom: 10px; /* Margen inferior de los subtítulos de tercer nivel */
+}
+
+ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno por defecto */
+}
+
+li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+}
+
+a {
+    color: #ffa11e; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado del texto */
+}
+
+a:hover {
+    text-decoration: underline; /* Subraya el texto al pasar el ratón */
+}
+
+.section {
+    margin-bottom: 20px; /* Espacio inferior entre secciones */
+    display: none; /* Oculta todas las secciones por defecto */
+}
+
+.section:target {
+    display: block; /* Muestra la sección seleccionada */
+}
+
+.section ul {
+    padding-left: 20px; /* Relleno a la izquierda para listas dentro de secciones */
+}
+
+.section ul li {
+    padding-left: 10px; /* Relleno a la izquierda para elementos de lista dentro de secciones */
+    position: relative; /* Permite la colocación absoluta de elementos hijos */
+}
+
+.section ul li::before {
+    content: "•"; /* Añade un punto antes de cada elemento de lista */
+    position: absolute; /* Coloca el punto de forma absoluta */
+    left: 0; /* Alinea el punto a la izquierda */
+    color: #ffa11e; /* Color del punto */
+}
